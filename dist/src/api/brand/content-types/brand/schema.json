@@ -1,0 +1,33 @@
+{
+    "kind": "collectionType",
+    "collectionName": "brands",
+    "info": {
+        "singularName": "brand",
+        "pluralName": "brands",
+        "displayName": "Brand"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "images": {
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "type": "media",
+            "multiple": true
+        },
+        "categories": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::category.category",
+            "mappedBy": "brands"
+        }
+    }
+}
