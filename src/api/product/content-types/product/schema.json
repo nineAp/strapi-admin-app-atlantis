@@ -17,11 +17,26 @@
     "description": {
       "type": "text"
     },
+    "features": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::feature.feature"
+    },
     "price": {
       "type": "decimal"
     },
     "quanity": {
       "type": "integer"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     },
     "brand": {
       "type": "relation",
